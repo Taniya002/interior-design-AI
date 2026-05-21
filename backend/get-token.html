@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h3>Token Generator</h3>
+  <div id="token">Loading...</div>
+  <div id="error" style="color:red"></div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
+  <script>
+        
+    try {
+      firebase.initializeApp({
+        apiKey: "AIzaSyBtTEGijwA0FDkp9Tporn4eYg6sDqDm8U0",                    // ← apni real value
+        authDomain: "interior-design-ai-af4b9.firebaseapp.com", // ← apni real value
+        projectId: "interior-design-ai-af4b9",               // ← apni real value
+      });
+
+      document.getElementById('token').innerHTML = "Firebase connected... logging in";
+      
+      firebase.auth()
+        .signInWithEmailAndPassword("test2@test.com", "Test@12345")
+        .then(async (userCredential) => {
+          const token = await userCredential.user.getIdToken();
+          document.getElementById('token').innerHTML = 
+            `<textarea rows="10" cols="100">${token}</textarea>`;
+        })
+        .catch(err => {
+          document.getElementById('error').innerHTML = `Login Error: ${err.message}`;
+          document.getElementById('token').innerHTML = "";
+        });
+
+    } catch(err) {
+      document.getElementById('error').innerHTML = `Config Error: ${err.message}`;
+    }
+  </script>
+</body>
+</html>
