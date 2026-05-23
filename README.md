@@ -2,7 +2,6 @@
 
 Transform any room photo into a beautifully redesigned space instantly using AI!
 
-![RoomAI Banner](https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&q=80)
 
 ---
 
@@ -208,13 +207,6 @@ npm run dev
 
 ---
 
-## 📸 Screenshots
-
-### Home Page
-![Home](https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80)
-
-### Before & After
-![Before After](https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80)
 
 ---
 
