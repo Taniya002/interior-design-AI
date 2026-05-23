@@ -2,9 +2,10 @@ import axios from "axios";
 import { auth } from "./firebase";
 
 // Backend base URL
-export const api = axios.create({ baseURL: "http://localhost:3000" });
+export const api = axios.create({ 
+  baseURL: import.meta.env.VITE_API_URL || "http://localhost:3000" 
+});
 
-// Har request mein Firebase token add karo
 api.interceptors.request.use(async (config) => {
   const user = auth.currentUser;
   if (user) {
