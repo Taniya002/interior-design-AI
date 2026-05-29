@@ -36,7 +36,7 @@ app.use('/api/interior', interiorRoutes); // GET  /api/interior/themes
 // ─── Health Check ─────────────────────────────────
 app.get('/', (req, res) => {
   res.json({
-    message: '🏠 Interior Design AI Backend is running!',
+    message: ' Interior Design AI Backend is running!',
     endpoints: {
       uploadRoom:     'POST /api/upload-room',
       getThemes:      'GET  /api/interior/themes',
@@ -53,8 +53,8 @@ app.use((err, req, res, next) => {
 
 // ─── Start Server ─────────────────────────────────
 app.listen(PORT, () => {
-  console.log(`✅ Server running on http://localhost:${PORT}`);
-  console.log(`📋 Endpoints:`);
+  console.log(` Server running on http://localhost:${PORT}`);
+  console.log(` Endpoints:`);
   console.log(`   POST http://localhost:${PORT}/api/upload-room`);
   console.log(`   GET  http://localhost:${PORT}/api/interior/themes`);
   console.log(`   POST http://localhost:${PORT}/api/interior/generate`);
