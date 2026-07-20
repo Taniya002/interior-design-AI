@@ -22,7 +22,7 @@ app.use(cors({
   origin: [
     'http://localhost:5173',
     'http://localhost:8080',
-    'https://roomai-frontend.onrender.com', // ← add karo
+    'https://roomai-frontend.netlify.app',
   ],
   credentials: true,
 }));
